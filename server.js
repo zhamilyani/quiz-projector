@@ -6,7 +6,7 @@ const { listQuizzes, getQuiz, saveQuiz, deleteQuiz } = require('./server/quiz-ap
 const { handleUpload } = require('./server/media-api');
 const { handleGenerate } = require('./server/generate-api');
 
-const PORT = 3005;
+const PORT = process.env.PORT || 3005;
 const DIST_DIR = path.join(__dirname, 'dist');
 const ROOT_DIR = __dirname;
 
