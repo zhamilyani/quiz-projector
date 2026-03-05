@@ -1,0 +1,39 @@
+body { background: var(--bg-dark); padding: 0; -webkit-tap-highlight-color: transparent; }
+header { background: var(--surface); padding: 0.6rem 1rem; display: flex; align-items: center; gap: 0.8rem; position: sticky; top: 0; z-index: 100; }
+header select { flex: 1; }
+.ws-dot { font-size: 1.2rem; color: var(--danger); }
+.ws-dot.ok { color: var(--success); }
+.panel { display: none; padding: 0.8rem; }
+.panel.active { display: block; }
+.nav-strip { display: flex; gap: 0.4rem; overflow-x: auto; padding-bottom: 0.5rem; -webkit-overflow-scrolling: touch; }
+.nav-btn { padding: 0.5em 0.8em; background: var(--surface); color: var(--text-muted); white-space: nowrap; font-size: 0.9rem; border-radius: 8px; flex-shrink: 0; }
+.nav-btn.active { background: var(--accent); color: #1a1a2e; font-weight: 600; }
+.q-nav { display: flex; gap: 0.3rem; flex-wrap: wrap; margin: 0.8rem 0; }
+.q-btn { width: 44px; height: 44px; border-radius: 8px; background: var(--surface); color: var(--text); font-weight: 700; font-size: 1rem; display: flex; align-items: center; justify-content: center; }
+.q-btn.active { background: var(--accent); color: #1a1a2e; }
+.q-btn.answered { background: var(--success); color: white; }
+.current-card { background: var(--surface); border-radius: var(--radius); padding: 1rem; margin-bottom: 0.8rem; min-height: 100px; }
+.card-label { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.3rem; }
+.card-text { font-size: 1.2rem; line-height: 1.4; }
+.card-answer { margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.1); color: var(--success); font-weight: 600; font-size: 1.1rem; }
+.controls { display: flex; gap: 0.5rem; margin-bottom: 0.8rem; }
+.ctrl-btn { flex: 1; padding: 0.8em; font-size: 1rem; font-weight: 600; background: var(--surface-light); color: var(--text); border-radius: var(--radius); }
+.ctrl-btn.accent { background: var(--accent); color: #1a1a2e; }
+.ctrl-btn.green { background: var(--success); color: white; }
+.timer-section { background: var(--surface); border-radius: var(--radius); padding: 1rem; margin-bottom: 0.8rem; text-align: center; }
+.timer-display { font-size: 3rem; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+.timer-display.danger { color: var(--danger); }
+.timer-controls { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
+.scores-section { background: var(--surface); border-radius: var(--radius); padding: 1rem; }
+.scores-section h3 { color: var(--accent); margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem; }
+.team-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+.team-name { flex: 1; font-size: 0.95rem; background: transparent; border: 1px solid var(--surface-light); padding: 0.4em; }
+.team-score { width: 60px; text-align: center; font-weight: 700; font-size: 1.1rem; background: transparent; border: 1px solid var(--surface-light); }
+.score-btn { width: 36px; height: 36px; border-radius: 8px; font-size: 1.2rem; font-weight: 700; display: flex; align-items: center; justify-content: center; background: var(--surface-light); color: var(--text); }
+.score-btn.plus { background: rgba(46, 204, 113, 0.2); color: var(--success); }
+.score-btn.minus { background: rgba(231, 76, 60, 0.2); color: var(--danger); }
+@media (max-width: 600px) {
+  .current-card { padding: 0.8rem; }
+  .card-text { font-size: 1rem; }
+  .timer-display { font-size: 2.5rem; }
+}

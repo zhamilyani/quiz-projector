@@ -1,0 +1,17 @@
+{
+  "name": "quiz-projector",
+  "version": "1.0.0",
+  "description": "Quiz constructor + projector for pub quizzes",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "server": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "vite": "^6.3.0"
+  }
+}

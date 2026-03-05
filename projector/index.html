@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Проектор</title>
+  <link rel="stylesheet" href="/src/shared/styles-common.css">
+  <link rel="stylesheet" href="/src/projector/projector.css">
+</head>
+<body>
+  <div id="screen-welcome" class="screen active">
+    <h1 class="welcome-title" id="welcome-title">Quiz Projector</h1>
+    <p class="welcome-sub">Ожидание начала игры...</p>
+  </div>
+  <div id="screen-round" class="screen">
+    <div class="round-num" id="round-num"></div>
+    <h1 class="round-title" id="round-title"></h1>
+  </div>
+  <div id="screen-question" class="screen">
+    <div class="q-header"><span class="q-badge" id="q-badge"></span></div>
+    <div class="q-content">
+      <div class="q-media" id="q-media"></div>
+      <div class="q-text" id="q-text"></div>
+    </div>
+    <div class="timer-bar-wrap" id="timer-wrap">
+      <div class="timer-bar" id="timer-bar"></div>
+      <span class="timer-text" id="timer-text"></span>
+    </div>
+  </div>
+  <div id="screen-discussion" class="screen">
+    <h1 class="discussion-title">Время на обсуждение</h1>
+    <div class="discussion-timer" id="discussion-timer">30</div>
+    <div class="discussion-bar-wrap">
+      <div class="discussion-bar" id="discussion-bar"></div>
+    </div>
+  </div>
+  <div id="screen-answer" class="screen">
+    <div class="answer-label">Правильный ответ</div>
+    <h1 class="answer-text" id="answer-text"></h1>
+    <div id="answer-media"></div>
+  </div>
+  <div id="screen-answers" class="screen">
+    <h2 class="answers-title" id="answers-title">Ответы</h2>
+    <div class="answers-list" id="answers-list"></div>
+  </div>
+  <div id="screen-leaderboard" class="screen">
+    <h2 class="lb-title">Таблица лидеров</h2>
+    <div class="lb-bars" id="lb-bars"></div>
+  </div>
+  <div id="screen-final" class="screen">
+    <div class="final-label">Победитель</div>
+    <h1 class="final-winner" id="final-winner"></h1>
+    <canvas id="confetti-canvas"></canvas>
+  </div>
+  <div class="connection-status" id="conn-status">&#9679;</div>
+  <script type="module" src="/src/projector/projector.js"></script>
+</body>
+</html>

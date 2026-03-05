@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Панель ведущего</title>
+  <link rel="stylesheet" href="/src/shared/styles-common.css">
+  <link rel="stylesheet" href="/src/host/host.css">
+</head>
+<body>
+  <header>
+    <select id="quiz-select"></select>
+    <span class="ws-dot" id="ws-dot">&#9679;</span>
+  </header>
+  <div id="panel-noQuiz" class="panel active">
+    <p style="text-align:center;color:var(--text-muted);padding:3rem 1rem;">Выберите квиз для начала игры</p>
+  </div>
+  <div id="panel-game" class="panel">
+    <div class="nav-strip">
+      <button id="btn-welcome" class="nav-btn">Приветствие</button>
+      <div id="round-tabs"></div>
+    </div>
+    <div class="q-nav" id="q-nav"></div>
+    <div class="current-card" id="current-card">
+      <div class="card-label" id="card-label">—</div>
+      <div class="card-text" id="card-text"></div>
+      <div class="card-answer" id="card-answer"></div>
+    </div>
+    <div class="controls">
+      <button class="ctrl-btn accent" id="btn-show-question">Вопрос</button>
+      <button class="ctrl-btn green" id="btn-show-answer">Ответ</button>
+      <button class="ctrl-btn" id="btn-show-discussion" style="background:#9b59b6">Обсуждение</button>
+      <button class="ctrl-btn" id="btn-show-round-answers" style="background:var(--accent-light);color:#1a1a2e">Все ответы</button>
+    </div>
+    <div class="timer-section">
+      <div class="timer-display" id="timer-display">60</div>
+      <div class="timer-controls">
+        <button class="ctrl-btn accent" id="btn-timer-start">&#9654; Старт</button>
+        <button class="ctrl-btn" id="btn-timer-pause">&#9208; Пауза</button>
+        <button class="ctrl-btn" id="btn-timer-reset">&#8634; Сброс</button>
+      </div>
+    </div>
+    <div class="scores-section">
+      <h3>Очки команд <button class="btn-icon" id="btn-show-lb" title="Показать на проекторе">&#128202;</button> <button class="btn-icon" id="btn-show-final" title="Показать финал">&#127942;</button></h3>
+      <div id="teams-list"></div>
+      <button class="btn-secondary" id="btn-add-team" style="width:100%;margin-top:0.5rem">+ Команда</button>
+    </div>
+  </div>
+  <script type="module" src="/src/host/host.js"></script>
+</body>
+</html>
